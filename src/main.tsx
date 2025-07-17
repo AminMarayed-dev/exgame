@@ -3,9 +3,14 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
+import { HeroUIProvider } from "@heroui/react";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HeroUIProvider>
+      <main className="bg-background dark text-foreground">
+        <RouterProvider router={router} />
+      </main>
+    </HeroUIProvider>
   </StrictMode>
 );
