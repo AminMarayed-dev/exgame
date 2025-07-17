@@ -8,9 +8,7 @@ import { HeroUIProvider } from "@heroui/react";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HeroUIProvider>
-      <main className="bg-background dark text-foreground">
-        <RouterProvider router={router} />
-      </main>
+      <RouterProvider router={router} />
     </HeroUIProvider>
   </StrictMode>
 );
