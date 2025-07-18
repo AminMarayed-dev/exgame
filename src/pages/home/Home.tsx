@@ -1,7 +1,7 @@
-import { Button } from "@heroui/react";
+import HomeView from "../../view/home/HomeView";
 
 function Home() {
-  return <Button>کلیک کنید</Button>;
+  return <HomeView/>;
 }
 
 export default Home;
