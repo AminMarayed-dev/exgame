@@ -534,7 +534,7 @@
     "@react-stately/menu" "3.9.5"
     "@react-types/menu" "3.10.2"
 
-"@heroui/form@2.1.23":
+"@heroui/form@2.1.23", "@heroui/form@^2.1.23":
   version "2.1.23"
   resolved "https://registry.yarnpkg.com/@heroui/form/-/form-2.1.23.tgz#768380e263eeaae80dad380a799712cb731474ac"
   integrity sha512-g4yrAdSVkyFZkWyR/mo7bCeV54Z9h19w0afsPv8NSQitLJuPP/ybkUMPYpNjwwr6qeab1WDtkhfDlURNb3z+pw==
@@ -579,7 +579,7 @@
     "@react-types/textfield" "3.12.3"
     input-otp "1.4.1"
 
-"@heroui/input@2.4.24":
+"@heroui/input@2.4.24", "@heroui/input@^2.4.24":
   version "2.4.24"
   resolved "https://registry.yarnpkg.com/@heroui/input/-/input-2.4.24.tgz#cb14e5e5a8d775a3ca223a01a1a2ea8a213df783"
   integrity sha512-W279AIxrW8mEagBsHwqSULxMuYFJn5gCuS+GkHOGskiZJ/j/SC9m61EBVNbRUfiuZuAR/SeD/Jw/RpXxaLd27w==
@@ -1030,7 +1030,7 @@
     tailwind-merge "3.0.2"
     tailwind-variants "1.0.0"
 
-"@heroui/toast@2.0.13":
+"@heroui/toast@2.0.13", "@heroui/toast@^2.0.13":
   version "2.0.13"
   resolved "https://registry.yarnpkg.com/@heroui/toast/-/toast-2.0.13.tgz#b5c877df8379492358924d4e6051653ff83bdaa1"
   integrity sha512-qaUvUVA9goYFnsTReytlxtxSRnXFXmdG48gZ6CCFFKt8pENPWcxSap8Y83oDr4pciCpAae/GgYnDpQHg+ytRyQ==
@@ -1242,6 +1242,13 @@
     "@heroui/react-utils" "2.1.12"
     "@heroui/shared-utils" "2.1.10"
     "@react-aria/focus" "3.20.5"
+
+"@hookform/resolvers@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-5.1.1.tgz#91074ba4fb749cc74e6465e75d38256146b0c4ab"
+  integrity sha512-J/NVING3LMAEvexJkyTLjruSm7aOFx7QX21pzkiJfMoNG0wl5aFEjLTl7ay7IQb9EWY6AkrBy7tHL2Alijpdcg==
+  dependencies:
+    "@standard-schema/utils" "^0.3.0"
 
 "@humanfs/core@^0.19.1":
   version "0.19.1"
@@ -2391,6 +2398,11 @@
   version "4.45.1"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.45.1.tgz#e5085c6d13da15b4c5133cd2a6bb11f25b6bb77a"
   integrity sha512-M/fKi4sasCdM8i0aWJjCSFm2qEnYRR8AMLG2kxp6wD13+tMGA4Z1tVAuHkNRjud5SW2EM3naLuK35w9twvf6aA==
+
+"@standard-schema/utils@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@standard-schema/utils/-/utils-0.3.0.tgz#3d5e608f16c2390c10528e98e59aef6bf73cae7b"
+  integrity sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==
 
 "@swc/core-darwin-arm64@1.12.14":
   version "1.12.14"
@@ -3564,6 +3576,11 @@ react-dom@^19.1.0:
   dependencies:
     scheduler "^0.26.0"
 
+react-hook-form@^7.60.0:
+  version "7.60.0"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.60.0.tgz#cc4bfa2952d602fc8f1dcf2d4929fcb6d9cdc782"
+  integrity sha512-SBrYOvMbDB7cV8ZfNpaiLcgjH/a1c7aK0lK+aNigpf4xWLO8q+o4tcvVurv3c4EOyzn/3dCsYt4GKD42VvJ/+A==
+
 react-router-dom@^7.6.3:
   version "7.6.3"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.6.3.tgz#45686e71bb958cf80dd93ca3abf4111feb4edd35"
@@ -3852,3 +3869,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zod@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-4.0.5.tgz#b47825f318e7884d94bcd6f5385a1de805ccfb1c"
+  integrity sha512-/5UuuRPStvHXu7RS+gmvRf4NXrNxpSllGwDnCBcJZtQsKrviYXm54yDGV2KYNLT5kq0lHGcl7lqWJLgSaG+tgA==

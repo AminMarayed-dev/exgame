@@ -11,17 +11,23 @@
   },
   "dependencies": {
     "@heroui/button": "^2.2.23",
+    "@heroui/form": "^2.1.23",
     "@heroui/image": "^2.2.15",
+    "@heroui/input": "^2.4.24",
     "@heroui/navbar": "^2.2.21",
     "@heroui/react": "^2.8.1",
+    "@heroui/toast": "^2.0.13",
+    "@hookform/resolvers": "^5.1.1",
     "@tailwindcss/vite": "^4.1.11",
     "framer-motion": "^12.23.6",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-hook-form": "^7.60.0",
     "react-router-dom": "^7.6.3",
     "swiper": "^11.2.10",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "zod": "^4.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
