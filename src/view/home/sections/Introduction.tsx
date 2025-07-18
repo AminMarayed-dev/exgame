@@ -21,10 +21,10 @@ function Introduction() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-5xl font-bold text-foreground leading-tight"
               >
-                Welcome to Our
+                مینی‌اپ روباه شنی از
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   {" "}
-                  Amazing Platform
+                  صرافی داریا
                 </span>
               </motion.h1>
 
@@ -32,12 +32,14 @@ function Introduction() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-xl text-foreground leading-relaxed"
+                className="text-xl text-gray-600 leading-relaxed"
               >
-                Discover the future of digital experiences with our cutting-edge
-                platform. We combine innovation with simplicity to create
-                something truly extraordinary that will transform the way you
-                interact with technology.
+                یه مینی‌اپ فوق‌العاده از تیم صرافی داریا که توش نقش مدیرعامل یه
+                صرافی رمزارز رو بازی می‌کنی! هر وقت روباه شنی کوچولو روی صفحه
+                موبایلت ظاهر شد، سریع روش بزنی تا سکه جمع کنی. بعد با سکه‌هات
+                کارت‌های توسعه صرافی بخری و نرخ «درآمد ساعتی»ت رو بالاتر ببری.
+                ترکیبی از هیجان، استراتژی و درآمد دیجیتال، حالا با پشتوانه صرافی
+                داریا!
               </motion.p>
             </div>
           </motion.div>
@@ -95,12 +97,12 @@ function Introduction() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight"
+                className="text-3xl sm:text-4xl font-bold text-foreground leading-tight"
               >
-                Welcome to Our
+                مینی‌اپ روباه شنی از
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   {" "}
-                  Amazing Platform
+                  صرافی داریا
                 </span>
               </motion.h1>
 
@@ -110,13 +112,14 @@ function Introduction() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto"
               >
-                Discover the future of digital experiences with our cutting-edge
-                platform. We combine innovation with simplicity to create
-                something truly extraordinary.
+                یه مینی‌اپ فوق‌العاده از تیم صرافی داریا که توش نقش مدیرعامل یه
+                صرافی رمزارز رو بازی می‌کنی! هر وقت روباه شنی کوچولو روی صفحه
+                موبایلت ظاهر شد، سریع روش بزنی تا سکه جمع کنی. بعد با سکه‌هات
+                کارت‌های توسعه صرافی بخری و نرخ «درآمد ساعتی»ت رو بالاتر ببری.
+                ترکیبی از هیجان، استراتژی و درآمد دیجیتال، حالا با پشتوانه صرافی
+                داریا!
               </motion.p>
             </div>
-
-
           </motion.div>
         </div>
       </div>

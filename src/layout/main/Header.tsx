@@ -88,7 +88,7 @@ export default function Header() {
           <NavbarMenuItem key={`${item.name}-${index}`}>
             <Link
               color="foreground"
-              className="w-full text-foreground hover:text-primary transition-colors duration-200 font-medium py-3 text-lg"
+              className="w-full text-[#E0E0E0] hover:text-[#FFA726] transition-colors duration-200 font-medium py-3 text-lg"
               href={item.href}
               size="lg"
             >
