@@ -25,6 +25,7 @@ module.exports = {
               DEFAULT: "#FFD54F",
               foreground: "#1E1E1E",
             },
+            foreground: "#E0E0E0",
           },
         },
       },
