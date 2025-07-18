@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"; // This renders the nested route content
 import Header from "./Header";
-
+import Footer from "./Footer";
 
 function MainLayout() {
   return (
@@ -11,6 +11,7 @@ function MainLayout() {
         <Outlet />
         {/* </div> */}
       </main>
+      <Footer />
     </div>
   );
 }
