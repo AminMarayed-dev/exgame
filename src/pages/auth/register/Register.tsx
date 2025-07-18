@@ -1,5 +1,7 @@
+import RegisterView from "../../../view/auth/RegisterView";
+
 function Register() {
-    return <div>register page</div>
+  return <RegisterView />;
 }
 
 export default Register;
