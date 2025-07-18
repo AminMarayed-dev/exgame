@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button, Image } from "@heroui/react";
-import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -59,9 +59,6 @@ function Slider() {
     setCurrentSlide(index);
   };
 
-  const toggleAutoPlay = () => {
-    setIsAutoPlay(!isAutoPlay);
-  };
 
   return (
     <section className="relative h-screen min-h-[600px] md:min-h-[700px] overflow-hidden">
@@ -91,7 +88,7 @@ function Slider() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+                  className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text"
                 >
                   {sliderData[currentSlide].title}
                 </motion.h1>
@@ -168,36 +165,6 @@ function Slider() {
             />
           ))}
         </div>
-
-        {/* Control Buttons */}
-        <div className="flex items-center space-x-4">
-          <Button
-            isIconOnly
-            variant="flat"
-            onClick={prevSlide}
-            className="bg-foreground/10 hover:bg-foreground/20 text-foreground rounded-full"
-          >
-            <ChevronLeft size={20} />
-          </Button>
-
-          <Button
-            isIconOnly
-            variant="flat"
-            onClick={toggleAutoPlay}
-            className="bg-foreground/10 hover:bg-foreground/20 text-foreground rounded-full"
-          >
-            {isAutoPlay ? <Pause size={20} /> : <Play size={20} />}
-          </Button>
-
-          <Button
-            isIconOnly
-            variant="flat"
-            onClick={nextSlide}
-            className="bg-foreground/10 hover:bg-foreground/20 text-foreground rounded-full"
-          >
-            <ChevronRight size={20} />
-          </Button>
-        </div>
       </div>
 
       {/* Side Navigation - Desktop Only */}
@@ -221,16 +188,6 @@ function Slider() {
         </Button>
       </div>
 
-      {/* Progress Bar */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-foreground/10">
-        <motion.div
-          className="h-full bg-gradient-to-r from-primary to-secondary"
-          initial={{ width: "0%" }}
-          animate={{ width: isAutoPlay ? "100%" : "0%" }}
-          transition={{ duration: 5, ease: "linear" }}
-          key={`${currentSlide}-${isAutoPlay}`}
-        />
-      </div>
     </section>
   );
 }
