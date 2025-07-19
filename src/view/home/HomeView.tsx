@@ -1,4 +1,5 @@
 import Introduction from "./sections/Introduction";
+import LinkDownload from "./sections/LinkDownload";
 import Marketing from "./sections/Marketing";
 import Slider from "./sections/slider";
 
@@ -8,6 +9,7 @@ function HomeView() {
             <Introduction />
             <Marketing />
             <Slider />
+            <LinkDownload />
         </div>
     );
 }
