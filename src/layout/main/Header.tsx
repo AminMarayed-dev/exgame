@@ -46,7 +46,13 @@ export default function Header() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden text-primary"
         />
-        <NavbarBrand>
+        <NavbarBrand
+          as="a"
+          href="https://fa.exdariya.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer flex items-center"
+        >
           <DariyaLogo />
           <p className="font-bold text-xl text-primary ml-2">Dariya</p>
         </NavbarBrand>
