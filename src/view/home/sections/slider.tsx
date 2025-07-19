@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button, Image } from "@heroui/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import changeImg from "../../../assets/images/change.webp";
 
 function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [isAutoPlay] = useState(true);
 
   const sliderData = [
     {
@@ -13,7 +14,7 @@ function Slider() {
       title: "تجربه معاملات آسان",
       description:
         "با پلتفرم پیشرفته ما، معاملات رمزارز را با سرعت و امنیت بالا انجام دهید",
-      image: "/src/assets/images/change.webp",
+      image: changeImg,
       bgColor: "from-primary/20 to-secondary/20",
     },
     {
@@ -21,7 +22,7 @@ function Slider() {
       title: "امنیت حرفه‌ای",
       description:
         "دارایی‌های شما با بالاترین استانداردهای امنیتی محافظت می‌شوند",
-      image: "/src/assets/images/change.webp",
+      image: changeImg,
       bgColor: "from-secondary/20 to-primary/20",
     },
     {
@@ -29,7 +30,7 @@ function Slider() {
       title: "پشتیبانی 24/7",
       description:
         "تیم پشتیبانی ما همیشه آماده کمک به شما در هر ساعت از شبانه‌روز است",
-      image: "/src/assets/images/change.webp",
+      image: changeImg,
       bgColor: "from-primary/15 to-secondary/15",
     },
   ];

@@ -1,5 +1,6 @@
 import { Image } from "@heroui/react";
 import { motion } from "framer-motion";
+import changeImg from "../../../assets/images/change.webp";
 
 function Introduction() {
   return (
@@ -54,7 +55,7 @@ function Introduction() {
             <div className="relative">
               <Image
                 alt="Introduction Hero Image"
-                src="/src/assets/images/change.webp"
+                src={changeImg}
                 width={500}
                 height={400}
                 className="rounded-3xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
@@ -76,7 +77,7 @@ function Introduction() {
             <div className="relative">
               <Image
                 alt="Introduction Hero Image"
-                src="/src/assets/images/change.webp"
+                src={changeImg}
                 width={350}
                 height={280}
                 className="rounded-3xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
