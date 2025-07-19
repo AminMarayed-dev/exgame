@@ -87,6 +87,7 @@ const RegisterView: React.FC = () => {
                     input: "text-foreground",
                     label: "text-foreground/80",
                     inputWrapper: "border-primary/30 hover:border-primary/50",
+                    errorMessage: "text-right rtl",
                   }}
                 />
               </div>
@@ -106,6 +107,7 @@ const RegisterView: React.FC = () => {
                     input: "text-foreground",
                     label: "text-foreground/80",
                     inputWrapper: "border-primary/30 hover:border-primary/50",
+                    errorMessage: "text-right rtl",
                   }}
                 />
               </div>
@@ -125,6 +127,7 @@ const RegisterView: React.FC = () => {
                     input: "text-foreground",
                     label: "text-foreground/80",
                     inputWrapper: "border-primary/30 hover:border-primary/50",
+                    errorMessage: "text-right rtl",
                   }}
                 />
               </div>
