@@ -30,9 +30,9 @@ export default function Header() {
 
   const menuItems = [
     { name: "خانه", href: "/" },
-    { name: "خدمات داریا", href: "/services" },
+    // { name: "خدمات داریا", href: "/services" },
     { name: "بلاگ", href: "/blog" },
-    { name: "درباره ما", href: "/about" },
+    { name: "درباره ما", href: "#about-us" },
   ];
 
   // Function to check if a menu item is active
@@ -106,7 +106,7 @@ export default function Header() {
           <Button
             as={Link}
             color="primary"
-            href="/register"
+            href="/auth/register"
             variant="solid"
             className="bg-gradient-to-r from-primary to-secondary hover:from-primary-600 hover:to-secondary-600 text-primary-foreground font-semibold px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
