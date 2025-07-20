@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import DariyaLogo from "../../assets/icons/Dariya_Logo.svg";
+import DariyaLogo from "../../assets/icons/fox.svg";  
 
 const Loading = () => {
   return (

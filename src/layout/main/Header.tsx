@@ -16,8 +16,8 @@ const DariyaLogo = () => {
   return (
     <div className="flex items-center">
       <img
-        src="/Dariya_Logo.svg"
-        alt="Dariya Logo"
+        src="/fox.svg"
+        alt="Fox Logo"
         className="w-10 h-10 mr-2"
       />
     </div>

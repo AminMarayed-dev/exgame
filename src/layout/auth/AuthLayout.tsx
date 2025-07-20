@@ -19,7 +19,7 @@ const AuthLayout: React.FC = () => {
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <div className="relative">
                   <img
-                    src="/Dariya_Logo.svg"
+                    src="/fox.svg"
                     alt="Dariya Logo"
                     className="w-10 h-10 transition-transform duration-300 group-hover:rotate-6"
                   />
