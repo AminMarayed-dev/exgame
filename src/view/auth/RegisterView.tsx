@@ -1,14 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  Input,
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-  addToast,
-} from "@heroui/react";
+import { Input, Button, addToast } from "@heroui/react";
 import { useNavigate } from "react-router-dom";
 import { registerSchema } from "./schema";
 import { userDatabase } from "../../mock";
@@ -56,106 +49,124 @@ const RegisterView: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/10 dark:from-background dark:via-background dark:to-primary/20 flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        {/* Stack 1: Title Section */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-2">خوش آمدید</h1>
-          <p className="text-foreground/70 text-sm">برای ثبت نام کلیک کنید</p>
+    <div className="w-full">
+      {/* Welcome Title */}
+      <div className="text-center mb-8">
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent mb-3">
+          خوش آمدید
+        </h1>
+        <p className="text-foreground/70 text-sm leading-relaxed">
+          برای ثبت نام در بازی داریا فرم زیر را تکمیل کنید
+        </p>
+      </div>
+
+      {/* Registration Form */}
+      <div className="space-y-6">
+        <div className="text-center">
+          <h2 className="text-xl font-semibold text-foreground mb-1">
+            ثبت نام
+          </h2>
+          <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
         </div>
 
-        {/* Stack 2: Form Card */}
-        <Card className="shadow-2xl bg-background/80 backdrop-blur-md border border-primary/20">
-          <CardHeader className="text-center pb-4">
-            <h2 className="text-xl font-semibold text-primary">ثبت نام</h2>
-          </CardHeader>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+          {/* First Name Input */}
+          <div className="space-y-2">
+            <Input
+              {...register("firstName")}
+              type="text"
+              label="نام"
+              placeholder="نام خود را وارد کنید"
+              variant="bordered"
+              size="lg"
+              color={errors.firstName ? "danger" : "default"}
+              isInvalid={!!errors.firstName}
+              errorMessage={errors.firstName?.message}
+              classNames={{
+                input: "text-foreground placeholder:text-foreground/40",
+                label: "text-foreground/80 font-medium",
+                inputWrapper: [
+                  "border-divider/40 hover:border-primary/60 focus-within:border-primary",
+                  "bg-background/50 backdrop-blur-sm",
+                  "transition-all duration-300",
+                ],
+                errorMessage: "text-right rtl text-xs",
+              }}
+            />
+          </div>
 
-          <CardBody className="space-y-6">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              {/* First Name Input */}
-              <div>
-                <Input
-                  {...register("firstName")}
-                  type="text"
-                  label="نام"
-                  placeholder="نام خود را وارد کنید"
-                  variant="bordered"
-                  color={errors.firstName ? "danger" : "primary"}
-                  isInvalid={!!errors.firstName}
-                  errorMessage={errors.firstName?.message}
-                  classNames={{
-                    input: "text-foreground",
-                    label: "text-foreground/80",
-                    inputWrapper: "border-primary/30 hover:border-primary/50",
-                    errorMessage: "text-right rtl",
-                  }}
-                />
-              </div>
+          {/* Last Name Input */}
+          <div className="space-y-2">
+            <Input
+              {...register("lastName")}
+              type="text"
+              label="نام خانوادگی"
+              placeholder="نام خانوادگی خود را وارد کنید"
+              variant="bordered"
+              size="lg"
+              color={errors.lastName ? "danger" : "default"}
+              isInvalid={!!errors.lastName}
+              errorMessage={errors.lastName?.message}
+              classNames={{
+                input: "text-foreground placeholder:text-foreground/40",
+                label: "text-foreground/80 font-medium",
+                inputWrapper: [
+                  "border-divider/40 hover:border-primary/60 focus-within:border-primary",
+                  "bg-background/50 backdrop-blur-sm",
+                  "transition-all duration-300",
+                ],
+                errorMessage: "text-right rtl text-xs",
+              }}
+            />
+          </div>
 
-              {/* Last Name Input */}
-              <div>
-                <Input
-                  {...register("lastName")}
-                  type="text"
-                  label="نام خانوادگی"
-                  placeholder="نام خانوادگی خود را وارد کنید"
-                  variant="bordered"
-                  color={errors.lastName ? "danger" : "primary"}
-                  isInvalid={!!errors.lastName}
-                  errorMessage={errors.lastName?.message}
-                  classNames={{
-                    input: "text-foreground",
-                    label: "text-foreground/80",
-                    inputWrapper: "border-primary/30 hover:border-primary/50",
-                    errorMessage: "text-right rtl",
-                  }}
-                />
-              </div>
+          {/* Email Input */}
+          <div className="space-y-2">
+            <Input
+              {...register("email")}
+              type="email"
+              label="ایمیل"
+              placeholder="ایمیل خود را وارد کنید"
+              variant="bordered"
+              size="lg"
+              color={errors.email ? "danger" : "default"}
+              isInvalid={!!errors.email}
+              errorMessage={errors.email?.message}
+              classNames={{
+                input: "text-foreground placeholder:text-foreground/40",
+                label: "text-foreground/80 font-medium",
+                inputWrapper: [
+                  "border-divider/40 hover:border-primary/60 focus-within:border-primary",
+                  "bg-background/50 backdrop-blur-sm",
+                  "transition-all duration-300",
+                ],
+                errorMessage: "text-right rtl text-xs",
+              }}
+            />
+          </div>
 
-              {/* Email Input */}
-              <div>
-                <Input
-                  {...register("email")}
-                  type="email"
-                  label="ایمیل"
-                  placeholder="ایمیل خود را وارد کنید"
-                  variant="bordered"
-                  color={errors.email ? "danger" : "primary"}
-                  isInvalid={!!errors.email}
-                  errorMessage={errors.email?.message}
-                  classNames={{
-                    input: "text-foreground",
-                    label: "text-foreground/80",
-                    inputWrapper: "border-primary/30 hover:border-primary/50",
-                    errorMessage: "text-right rtl",
-                  }}
-                />
-              </div>
-
-              {/* Stack 3: Submit Button */}
-              <div className="pt-4">
-                <Button
-                  type="submit"
-                  color="primary"
-                  size="lg"
-                  className="w-full font-semibold"
-                  isLoading={isSubmitting}
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "در حال ثبت نام..." : "ثبت نام"}
-                </Button>
-              </div>
-            </form>
-          </CardBody>
-        </Card>
+          {/* Submit Button */}
+          <div className="pt-6">
+            <Button
+              type="submit"
+              color="primary"
+              size="lg"
+              className="w-full font-semibold h-12 text-base bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg hover:shadow-primary/25"
+              isLoading={isSubmitting}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "در حال ثبت نام..." : "ثبت نام"}
+            </Button>
+          </div>
+        </form>
 
         {/* Additional Info */}
-        <div className="text-center mt-6">
+        <div className="text-center pt-4 border-t border-divider/20">
           <p className="text-foreground/60 text-sm">
             حساب کاربری دارید؟{" "}
             <a
               href="/login"
-              className="text-primary hover:text-primary/80 font-medium transition-colors"
+              className="text-primary hover:text-secondary font-medium transition-colors duration-200 hover:underline"
             >
               ورود
             </a>
