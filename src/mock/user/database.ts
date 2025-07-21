@@ -43,8 +43,8 @@ export const userDatabase = {
   },
 
   // Get user by email
-  getByEmail: (email: string): User | undefined => {
-    return mockDatabase.users.find((user) => user.email === email);
+  getByNationalCode: (nationalCode: string): User | undefined => {
+    return mockDatabase.users.find((user) => user.nationalCode === nationalCode);
   },
 
   // Check if email exists

@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Services Section */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h3 className="text-lg font-semibold text-primary mb-4">خدمات</h3>
             <div className="space-y-3">
               <a
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
                 کیف پول سخت‌افزاری
               </a>
             </div>
-          </div>
+          </div> */}
 
           {/* About Section */}
           <div className="space-y-4">
@@ -143,6 +143,47 @@ const Footer: React.FC = () => {
                 className="block text-foreground hover:text-secondary transition-colors duration-200 hover:translate-x-1 transform"
               >
                 فرصت‌های شغلی
+              </a>
+            </div>
+          </div>
+
+          {/* Credit Logos Section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-primary mb-4">
+              نمادهای اعتماد
+            </h3>
+            <div className="flex flex-wrap gap-4 justify-start">
+              <a
+                href="https://trustseal.enamad.ir/?id=627912&Code=rtDqc1bAtzYM1tpWyZmZyoXfEqQPcsYC"
+                className="group transform hover:scale-105 transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/src/assets/images/enamad.webp"
+                  alt="نماد اعتماد الکترونیکی"
+                  className="h-20 w-auto object-contain bg-white rounded-lg p-3 shadow-lg hover:shadow-xl transition-shadow duration-300 group-hover:shadow-primary/20"
+                />
+              </a>
+              <a
+                href="#"
+                className="group transform hover:scale-105 transition-all duration-300"
+              >
+                <img
+                  src="/src/assets/images/majazi.webp"
+                  alt="نماد مجوز مجازی"
+                  className="h-20 w-auto object-contain bg-white rounded-lg p-3 shadow-lg hover:shadow-xl transition-shadow duration-300 group-hover:shadow-primary/20"
+                />
+              </a>
+              <a
+                href="#"
+                className="group transform hover:scale-105 transition-all duration-300"
+              >
+                <img
+                  src="/src/assets/images/reza.webp"
+                  alt="نماد رضا"
+                  className="h-20 w-auto object-contain bg-white rounded-lg p-3 shadow-lg hover:shadow-xl transition-shadow duration-300 group-hover:shadow-primary/20"
+                />
               </a>
             </div>
           </div>

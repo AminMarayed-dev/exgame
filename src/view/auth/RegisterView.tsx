@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input, Button, addToast } from "@heroui/react";
 import { useNavigate } from "react-router-dom";
 import { registerSchema } from "./schema";
-import { userDatabase } from "../../mock";
 import type { RegisterFormData } from "./schema";
 
 const RegisterView: React.FC = () => {
@@ -20,10 +19,11 @@ const RegisterView: React.FC = () => {
   const onSubmit = async (data: RegisterFormData) => {
     try {
       // Save user data to mock database
-      const newUser = await userDatabase.create(data);
-      console.log("User registered successfully:", newUser);
+      // const newUser = await userDatabase.create(data);
+      // console.log("User registered successfully:", newUser);
 
       // Show success toast with timeout progress
+      console.log(data);
       addToast({
         title: "اطلاعات شما با موفقیت ثبت شد",
         description:
@@ -71,42 +71,19 @@ const RegisterView: React.FC = () => {
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           {/* First Name Input */}
-          <div className="space-y-2">
-            <Input
-              {...register("firstName")}
-              type="text"
-              label="نام"
-              placeholder="نام خود را وارد کنید"
-              variant="bordered"
-              size="lg"
-              color={errors.firstName ? "danger" : "default"}
-              isInvalid={!!errors.firstName}
-              errorMessage={errors.firstName?.message}
-              classNames={{
-                input: "text-foreground placeholder:text-foreground/40",
-                label: "text-foreground/80 font-medium",
-                inputWrapper: [
-                  "border-divider/40 hover:border-primary/60 focus-within:border-primary",
-                  "bg-background/50 backdrop-blur-sm",
-                  "transition-all duration-300",
-                ],
-                errorMessage: "text-right rtl text-xs",
-              }}
-            />
-          </div>
 
           {/* Last Name Input */}
           <div className="space-y-2">
             <Input
-              {...register("lastName")}
+              {...register("phoneNumber")}
               type="text"
-              label="نام خانوادگی"
-              placeholder="نام خانوادگی خود را وارد کنید"
+              label="شماره موبایل"
+              placeholder="شماره موبایل خود را وارد کنید"
               variant="bordered"
               size="lg"
-              color={errors.lastName ? "danger" : "default"}
-              isInvalid={!!errors.lastName}
-              errorMessage={errors.lastName?.message}
+              color={errors.phoneNumber ? "danger" : "default"}
+              isInvalid={!!errors.phoneNumber}
+              errorMessage={errors.phoneNumber?.message}
               classNames={{
                 input: "text-foreground placeholder:text-foreground/40",
                 label: "text-foreground/80 font-medium",
@@ -123,15 +100,15 @@ const RegisterView: React.FC = () => {
           {/* Email Input */}
           <div className="space-y-2">
             <Input
-              {...register("email")}
-              type="email"
-              label="ایمیل"
-              placeholder="ایمیل خود را وارد کنید"
+              {...register("nationalCode")}
+              type="text"
+              label="کد ملی"
+              placeholder="کد ملی خود را وارد کنید"
               variant="bordered"
               size="lg"
-              color={errors.email ? "danger" : "default"}
-              isInvalid={!!errors.email}
-              errorMessage={errors.email?.message}
+              color={errors.nationalCode ? "danger" : "default"}
+              isInvalid={!!errors.nationalCode}
+              errorMessage={errors.nationalCode?.message}
               classNames={{
                 input: "text-foreground placeholder:text-foreground/40",
                 label: "text-foreground/80 font-medium",
